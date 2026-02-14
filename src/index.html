@@ -1,366 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elite English Literature tuition in Kiribathgoda. Mackenzie Education offers G.C.E O/L and A/L classes with an MA-qualified University Lecturer.">
-    <meta name="keywords" content="English Literature tuition Kiribathgoda, Mackenzie Education, Best Literature teacher Gampaha, A/L English literature online">
+    <meta name="description"
+        content="Elite English Literature tuition in Kiribathgoda. Mackenzie Education offers G.C.E O/L and A/L classes with an MA-qualified University Lecturer.">
+    <meta name="keywords"
+        content="English Literature tuition Kiribathgoda, Mackenzie Education, Best Literature teacher Gampaha, A/L English literature online">
     <title>Mackenzie Education | Elite English Literature Coaching</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <style>
-        :root {
-            --color-navy: #1B263B;
-            --color-gold: #D4AF37;
-            --color-ivory: #F8F9FA;
-            --color-text-dark: #333333;
-            --color-text-light: #F8F9FA;
-            --font-serif: 'Merriweather', serif;
-            --font-sans: 'Inter', sans-serif;
-            --transition-speed: 0.3s;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--color-ivory);
-            color: var(--color-text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: var(--font-serif);
-            color: var(--color-navy);
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Utility Classes */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: var(--color-gold);
-            color: var(--color-navy);
-            font-weight: 600;
-            border-radius: 4px;
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn svg {
-            margin-left: 0.5rem;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Header */
-        header {
-            background-color: var(--color-navy);
-            color: var(--color-ivory);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-gold);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color var(--transition-speed);
-        }
-
-        nav a:hover {
-            color: var(--color-gold);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--color-ivory);
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 8rem 2rem 6rem;
-            background: linear-gradient(135deg, rgba(27, 38, 59, 0.95), rgba(27, 38, 59, 0.8)), url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* Fallback generic academic image */
-            background-size: cover;
-            background-position: center;
-            color: var(--color-ivory);
-            max-width: 100%;
-        }
-
-        .hero h1 {
-            color: var(--color-gold);
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            animation-delay: 0.2s;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.9;
-            animation-delay: 0.4s;
-        }
-
-        .hero .btn {
-            animation-delay: 0.6s;
-        }
-
-        /* Class Showcase */
-        .classes {
-            text-align: center;
-        }
-
-        .classes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .class-card {
-            background: white;
-            padding: 2.5rem;
-            border-top: 4px solid var(--color-navy);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-            text-align: left;
-            opacity: 0; /* JS will handle reveal */
-        }
-
-        .class-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-top-color: var(--color-gold);
-        }
-
-        .class-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .class-card ul {
-            list-style-position: inside;
-            padding-left: 0.5rem;
-        }
-
-        .class-card li {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        /* Methodology */
-        .methodology {
-            background-color: #EAECEF;
-            max-width: 100%;
-        }
-        
-        .method-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .research-box {
-            background: var(--color-navy);
-            color: var(--color-ivory);
-            padding: 3rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .research-box::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-family: var(--font-serif);
-            font-size: 10rem;
-            opacity: 0.1;
-            color: var(--color-gold);
-        }
-
-        .research-box h3 {
-            color: var(--color-gold);
-        }
-
-        /* Lecturer Profile */
-        .profile {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .profile-image-container {
-            position: relative;
-        }
-        
-        .profile-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 20px 20px 0 var(--color-navy);
-        }
-
-        .profile-content h2 {
-            font-size: 2.5rem;
-        }
-
-        .credentials {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .credential-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-
-        .credential-item i {
-            color: var(--color-gold);
-            margin-top: 4px;
-        }
-
-        /* Floating WhatsApp */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            font-weight: 600;
-            transition: transform var(--transition-speed);
-        }
-
-        .floating-whatsapp:hover {
-            transform: scale(1.05);
-        }
-        
-        .floating-whatsapp::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 50px;
-            border: 2px solid var(--color-gold);
-            opacity: 0;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            100% { transform: scale(1.1); opacity: 0; }
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--color-navy);
-            color: #ccc;
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            max-width: 100%;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .profile { grid-template-columns: 1fr; gap: 2rem; }
-            .profile-img { box-shadow: 10px 10px 0 var(--color-navy); }
-            nav ul { display: none; } /* Simplified for MVP, ideally a hamburger menu */
-            .mobile-menu-btn { display: block; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
-        <div class="logo">Mackenzie Education</div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Mackenzie Education Logo" class="brand-logo">
+            Mackenzie Education
+        </div>
         <nav>
             <ul>
                 <li><a href="#classes">Classes</a></li>
@@ -427,9 +96,9 @@
             <div class="research-box">
                 <h3>Bridging the Secondary-to-Tertiary Gap</h3>
                 <p style="margin-top: 1rem;">
-                    Tehani's research focuses on the critical transition from school to university. 
-                    Our hybrid approach combines live interactive classes with curated digital resources 
-                    to ensure students are fully prepared for **English Medium Instruction (EMI)** 
+                    Tehani's research focuses on the critical transition from school to university.
+                    Our hybrid approach combines live interactive classes with curated digital resources
+                    to ensure students are fully prepared for **English Medium Instruction (EMI)**
                     at the university level. We don't just teach texts; we teach critical thinking.
                 </p>
             </div>
@@ -439,14 +108,14 @@
     <section id="lecturer" class="profile">
         <div class="profile-image-container fade-in">
             <!-- Placeholder for Lecturer Image -->
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tehani Tharunya Sooriyampola" class="profile-img">
+            <img src="images/logo.png" alt="Mackenzie Education Logo" class="profile-img">
         </div>
         <div class="profile-content fade-in">
-            <h2>Tehani Tharunya Sooriyampola</h2>
+            <h2>Tehani Sooriyampola</h2>
             <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">
                 An MA-qualified academic dedicated to shaping the next generation of critical thinkers.
             </p>
-            
+
             <div class="credentials">
                 <div class="credential-item">
                     <i data-lucide="award"></i>
@@ -490,31 +159,7 @@
         <span>Enroll for 2026 Batches</span>
     </a>
 
-    <script>
-        // Icon Initialization
-        lucide.createIcons();
-
-        // Scroll Reveal Animation
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-reveal, .fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-            observer.observe(el);
-        });
-    </script>
+    <script src="js/script.js" defer></script>
 </body>
+
 </html>
