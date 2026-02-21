@@ -276,6 +276,33 @@ nav a:hover {
     color: var(--color-gold);
 }
 
+.responsive-img-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    /* Right align on desktop */
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .responsive-box {
+        padding: 2.5rem 1.5rem !important;
+        /* Balanced left and right padding */
+        gap: 2rem !important;
+        width: 100%;
+        /* Ensure it spans the container properly */
+        box-sizing: border-box;
+    }
+
+    .responsive-img-container {
+        justify-content: center;
+        /* Center align on mobile */
+        flex: 1 1 100%;
+        /* Take full width so it doesn't hang to right */
+    }
+}
+
 /* Lecturer Profile */
 .profile {
     display: grid;
@@ -405,6 +432,28 @@ nav a:hover {
         transform: scale(1.1);
         opacity: 0;
     }
+}
+
+/* Image Animations */
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        box-shadow: 0 25px 50px rgba(212, 175, 55, 0.35);
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.floating-image {
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 /* Footer */
